@@ -1,43 +1,33 @@
 import { Download } from "lucide-react";
+const navLinks = [
+  "Home",
+  "About",
+  "Projects",
+  "Research",
+  "Experience",
+  "Contact",
+];
 
 function Navbar() {
   return (
-    <header className="w-full flex justify-center pt-8">
-      <nav className="w-[88%] max-w-[1500px] h-[72px] bg-[#0B0B0B] px-10 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full flex justify-center pt-5 z-50">
+      <nav className="w-[88%] max-w-[1500px] h-[72px] bg-[#0B0B0B]/80
+backdrop-blur-xl px-10 flex items-center justify-between">
 
         {/* Empty space (will become logo later) */}
         <div className="w-48"></div>
 
         {/* Navigation */}
-        <ul className="flex items-center gap-10 text-[16px] text-gray-300">
-
-          <li className="relative cursor-pointer text-white font-medium">
-            Home
-            <div className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-green-500"></div>
-          </li>
-
-          <li className="cursor-pointer transition-all duration-300 hover:text-white">
-            About
-          </li>
-
-          <li className="cursor-pointer transition-all duration-300 hover:text-white">
-            Projects
-          </li>
-
-          <li className="cursor-pointer transition-all duration-300 hover:text-white">
-            Research
-          </li>
-
-          <li className="cursor-pointer transition-all duration-300 hover:text-white">
-            Experience
-          </li>
-
-          <li className="cursor-pointer transition-all duration-300 hover:text-white">
-            Contact
-          </li>
-
-        </ul>
-
+        <ul className="flex items-center gap-8 text-[16px] text-zinc-300">
+  {navLinks.map((link) => (
+    <li
+      key={link}
+      className="cursor-pointer transition-all duration-300 hover:text-[#1ED760]"
+    >
+      {link}
+    </li>
+  ))}
+</ul>
         {/* Resume Button */}
         <div>
           <button
