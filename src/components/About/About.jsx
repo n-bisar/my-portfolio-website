@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div>
+    <div >
 
       <p className="text-[#1ED760] uppercase tracking-[0.25em] text-sm font-semibold">
         ABOUT ME

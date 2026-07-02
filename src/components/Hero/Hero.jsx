@@ -1,16 +1,27 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import profile from "../../assets/images/profile.png";
 import { Play, Music2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <section  className="w-[88%] max-w-[1500px] mx-auto mt-12">
+    <section id="home" className="w-[88%] max-w-[1500px] mx-auto mt-12">
 
-      <div className="grid grid-cols-2 items-center min-h-[700px]">
+      <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="grid grid-cols-2 items-center min-h-[700px]"
+>
 
         {/* LEFT */}
 
-        <div className="border border-red-500 h-full flex flex-col justify-center pl-16">
+        <motion.div
+  initial={{ opacity: 0, x: -60 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="h-full flex flex-col justify-center pl-16"
+>
 
           <div className="flex flex-col justify-center h-full">
 
@@ -56,76 +67,70 @@ function Hero() {
 
   {/* View My Work */}
 
-  <button
-    className="
-      flex
-      items-center
-      gap-3
-
-      h-14
-      px-8
-
-      rounded-full
-
-      bg-[#1ED760]
-
-      text-black
-      font-semibold
-      text-[15px]
-
-      transition-all
-      duration-300
-
-      hover:scale-105
-      hover:shadow-[0_0_25px_rgba(30,215,96,0.35)]
-    "
-  >
-    View My Work
-
-    <ArrowRight size={18} />
-  </button>
+  <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="
+    flex
+    items-center
+    gap-3
+    h-14
+    px-8
+    rounded-full
+    bg-[#1ED760]
+    text-black
+    font-semibold
+    text-[15px]
+    transition-all
+    duration-300
+    hover:shadow-[0_0_25px_rgba(30,215,96,0.35)]
+  "
+>
+  View My Work
+  <ArrowRight size={18} />
+</motion.button>
 
   {/* Contact */}
 
-  <button
-    className="
-      flex
-      items-center
-      gap-3
-
-      h-14
-      px-8
-
-      rounded-full
-
-      border
-      border-zinc-700
-
-      text-white
-      font-medium
-      text-[15px]
-
-      transition-all
-      duration-300
-
-      hover:border-[#1ED760]
-      hover:text-[#1ED760]
-    "
-  >
-    Contact Me
-
-    <MessageCircle size={18} />
-  </button>
+  <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="
+    flex
+    items-center
+    gap-3
+    h-14
+    px-8
+    rounded-full
+    border
+    border-zinc-700
+    text-white
+    font-medium
+    text-[15px]
+    transition-all
+    duration-300
+    hover:border-[#1ED760]
+    hover:text-[#1ED760]
+  "
+>
+  Contact Me
+  <MessageCircle size={18} />
+</motion.button>
 
 </div>
 
 </div>
 
-        </div>
+        </motion.div>
 
         {/* RIGHT */}
 
-        <div className="border border-green-500 h-full flex justify-center items-center">
+        <motion.div
+  initial={{ opacity: 0, x: 60 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="h-full flex justify-center items-center"
+>
 
           <div className="relative flex items-center justify-center h-full">
 
@@ -181,32 +186,26 @@ function Hero() {
 
   {/* Floating Spotify Card */}
 
-<div
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.8, duration: 0.6 }}
   className="
     absolute
-
     bottom-3
     left-6
-
     w-[400px]
     h-[90px]
-
     rounded-2xl
-
     bg-[#111111]/90
     backdrop-blur-md
-
     border
     border-zinc-800
-
     flex
     items-center
     justify-between
-
     px-5
-
     z-20
-
     shadow-2xl
   "
 >
@@ -276,12 +275,12 @@ function Hero() {
     <Play fill="black" size={18} color="black" />
   </button>
 
-</div>
+</motion.div>
 
 </div>
-        </div>
+        </motion.div>
 
-      </div>
+      </motion.div>
 
     </section>
   );
