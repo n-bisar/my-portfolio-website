@@ -59,7 +59,7 @@ function Navbar() {
 
         {/* Navigation */}
 
-        <ul className="flex items-center gap-3 text-[16px]">
+        <ul className="hidden lg:flex items-center gap-3 text-[16px]">
 
           {navItems.map((item) => (
 
@@ -94,38 +94,39 @@ function Navbar() {
 
         {/* Resume Button */}
 
-        <div>
+        <div className="hidden lg:block">
 
-          <button
-            className="
-              flex
-              items-center
-              gap-3
+          <a
+  href="/public/Resume/Bisar Nawaz Resume_CV.pdf"
+  download
+  className="
+    flex
+    items-center
+    gap-3
 
-              h-10
-              px-8
+    h-10
+    px-8
 
-              rounded-full
+    rounded-full
 
-              border-2
-              border-[#1ED760]
+    border-2
+    border-[#1ED760]
 
-              text-white
-              text-[15px]
-              font-medium
+    text-white
+    text-[15px]
+    font-medium
 
-              transition-all
-              duration-300
+    hover:bg-[#1ED760]
+    hover:text-black
 
-              hover:bg-[#1ED760]
-              hover:text-black
-            "
-          >
-            <span>Download Resume</span>
+    transition-all
+    duration-300
+  "
+>
+  <span>Download Resume</span>
 
-            <Download size={18} strokeWidth={2} />
-
-          </button>
+  <Download size={18} strokeWidth={2} />
+</a>
 
         </div>
 

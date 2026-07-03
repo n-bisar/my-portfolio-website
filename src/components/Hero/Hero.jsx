@@ -5,13 +5,35 @@ import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <section id="home" className="w-[88%] max-w-[1500px] mx-auto mt-12">
+    <section
+  id="home"
+  className="
+    w-[88%]
+    max-w-[1500px]
+    mx-auto
+
+    min-h-screen
+
+    flex
+    items-center
+  "
+>
 
       <motion.div
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8 }}
-  className="grid grid-cols-2 items-center min-h-[700px]"
+  className="
+grid
+grid-cols-1
+lg:grid-cols-2
+
+items-center
+
+min-h-screen
+
+gap-16
+"
 >
 
         {/* LEFT */}
@@ -20,7 +42,19 @@ function Hero() {
   initial={{ opacity: 0, x: -60 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8, delay: 0.2 }}
-  className="h-full flex flex-col justify-center pl-16"
+  className="
+h-full
+
+flex
+flex-col
+justify-center
+
+pl-0
+lg:pl-16
+
+text-center
+lg:text-left
+"
 >
 
           <div className="flex flex-col justify-center h-full">
@@ -31,7 +65,17 @@ function Hero() {
   </p>
 
   {/* Name */}
-  <h1 className="mt-4 text-7xl font-extrabold leading-none">
+  <h1 className="
+mt-4
+
+text-5xl
+sm:text-6xl
+lg:text-7xl
+
+font-extrabold
+
+leading-none
+">
     Bisar
     <br />
     <span className="text-[#1ED760]">
@@ -40,7 +84,17 @@ function Hero() {
   </h1>
 
   {/* Roles */}
-  <div className="mt-6 text-3xl text-gray-300 leading-relaxed">
+  <div className="
+mt-6
+
+text-xl
+sm:text-2xl
+lg:text-3xl
+
+text-gray-300
+
+leading-relaxed
+">
 
     <p>Electronics & Communication Engineer</p>
 
@@ -54,7 +108,21 @@ function Hero() {
 
   {/* Description */}
 
-  <p className="mt-8 max-w-xl text-gray-400 text-xl leading-9">
+  <p className="
+mt-8
+
+max-w-xl
+
+mx-auto
+lg:mx-0
+
+text-gray-400
+
+text-lg
+lg:text-xl
+
+leading-8
+">
 
     I build intelligent, scalable web applications
     and explore AI to solve real-world problems.
@@ -63,13 +131,32 @@ function Hero() {
 
   {/* CTA Buttons */}
 
-<div className="mt-10 flex items-center gap-5">
+<div className="
+mt-10
+
+flex
+
+flex-col
+sm:flex-row
+
+items-center
+
+justify-center
+lg:justify-start
+
+gap-5
+">
 
   {/* View My Work */}
 
   <motion.button
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
+  onClick={() => {
+    document.getElementById("projects")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
   className="
     flex
     items-center
@@ -95,6 +182,11 @@ function Hero() {
   <motion.button
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
   className="
     flex
     items-center
@@ -123,13 +215,28 @@ function Hero() {
 
         </motion.div>
 
+
+
+
+
+
         {/* RIGHT */}
 
         <motion.div
   initial={{ opacity: 0, x: 60 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8, delay: 0.4 }}
-  className="h-full flex justify-center items-center"
+  className="
+h-full
+
+flex
+
+justify-center
+items-center
+
+order-first
+lg:order-last
+"
 >
 
           <div className="relative flex items-center justify-center h-full">
@@ -139,8 +246,14 @@ function Hero() {
   className="
     absolute
 
-    w-[600px]
-    h-[600px]
+    w-[280px]
+    h-[280px]
+
+    sm:w-[380px]
+    sm:h-[380px]
+
+    lg:w-[600px]
+    lg:h-[600px]
 
     rounded-full
 
@@ -156,13 +269,18 @@ function Hero() {
   className="
     absolute
 
-    w-[520px]
-    h-[520px]
+    w-[240px]
+    h-[240px]
+
+    sm:w-[320px]
+    sm:h-[320px]
+
+    lg:w-[520px]
+    lg:h-[520px]
 
     rounded-full
 
     border
-
     border-[#1ED760]/10
   "
 ></div>
@@ -174,7 +292,9 @@ function Hero() {
     relative
     z-10
 
-    w-[470px]
+    w-[280px]
+    sm:w-[360px]
+    lg:w-[470px]
 
     object-contain
 
@@ -191,20 +311,30 @@ function Hero() {
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.8, duration: 0.6 }}
   className="
+    hidden
+    lg:flex
+
     absolute
+
     bottom-3
     left-6
+
     w-[400px]
     h-[90px]
+
     rounded-2xl
+
     bg-[#111111]/90
     backdrop-blur-md
+
     border
     border-zinc-800
-    flex
+
     items-center
     justify-between
+
     px-5
+
     z-20
     shadow-2xl
   "
