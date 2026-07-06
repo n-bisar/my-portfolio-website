@@ -1,5 +1,5 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
-import profile from "/src/assets/images/profile.png";
+import profile from "../../assets/images/profile.png";
 import { Play, Music2 } from "lucide-react";
 import { motion } from "framer-motion";
 
