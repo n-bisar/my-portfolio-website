@@ -21,6 +21,9 @@ import { TbBrandGithub } from "react-icons/tb";
 
 import { LuDatabase } from "react-icons/lu";
 
+import { motion } from "framer-motion";
+import { staggerContainer, fadeItem } from "/src/animation/fadeUp";
+
 
 
 const skills = [
@@ -52,75 +55,101 @@ const skills = [
 
 function Skills() {
   return (
-    <div className="pl-20">
+    <motion.div
+  className="pt-12 lg:pt-0 lg:pl-16"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.2 }}
+>
 
-      <p className="text-[#1ED760] uppercase tracking-[0.25em] text-sm font-semibold mb-8">
+      <p className="text-[#1ED760] uppercase tracking-[0.25em] text-sm font-semibold mb-8 text-center lg:text-left">
         SKILLS
       </p>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div
+        className="
+          grid
+          grid-cols-2
+          sm:grid-cols-2
+          md:grid-cols-3
 
+          gap-4
+          sm:gap-5
+        "
+      >
         {skills.map((skill) => (
 
-          <div
-            key={skill.name}
+          <motion.div
+  key={skill.name}
+  variants={fadeItem}
             className="
-            group
-h-[72px]
+              group
 
-rounded-2xl
+              h-[70px]
+              sm:h-[72px]
 
-bg-[#111111]
+              rounded-2xl
 
-border
-border-zinc-800
+              bg-[#111111]
 
-flex
-items-center
+              border
+              border-zinc-800
 
-gap-4
+              flex
+              items-center
 
-px-6
+              gap-3
+              sm:gap-4
 
-cursor-pointer
+              px-4
+              sm:px-6
 
-transition-all
-duration-300
+              cursor-pointer
 
-hover:border-[#1ED760]
+              transition-all
+              duration-300
 
-hover:bg-[#151515]
-
-hover:-translate-y-1
-
-hover:shadow-[0_0_20px_rgba(30,215,96,0.15)]
-"
+              hover:border-[#1ED760]
+              hover:bg-[#151515]
+              hover:-translate-y-1
+              hover:shadow-[0_0_20px_rgba(30,215,96,0.15)]
+            "
           >
 
             <div
-    className="
-    transition-transform
-    duration-300
-    group-hover:scale-110
-    "
->
-    {skill.icon}
-</div>
-            <span className="
-text-zinc-200
-font-medium
-tracking-wide
-">
+              className="
+                transition-transform
+                duration-300
+                group-hover:scale-110
+
+                text-xl
+                sm:text-2xl
+              "
+            >
+              {skill.icon}
+            </div>
+
+            <span
+              className="
+                text-zinc-200
+
+                text-sm
+                sm:text-base
+
+                font-medium
+                tracking-wide
+              "
+            >
               {skill.name}
             </span>
 
-          </div>
+          </motion.div>
 
         ))}
-
       </div>
 
-    </div>
+    </motion.div>
   );
 }
 

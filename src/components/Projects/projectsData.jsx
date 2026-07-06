@@ -20,7 +20,7 @@ const projects = [
   {
     title: "AnonMind",
     github: "https://github.com/n-bisar/AnonMind",
-    image: "/projects/anonmind.png",
+    image: "/images/Anonmind.png",
     description:
       "A privacy-first mental health platform that allows users to seek AI-assisted support and connect with verified professionals anonymously.",
     technologies:[
@@ -58,7 +58,7 @@ icon:<SiGooglegemini className="text-sky-400"/>
   title: "AI-Based Poultry Disease Detection",
   github: "#",
   demo: "#",
-  image: "/projects/poultry.png",
+  image: "/images/detection.png",
   description:
     "Developed a computer vision system during my summer internship using OpenCV and YOLOv8 to detect poultry size and assist in early disease identification.",
   technologies: [
@@ -80,7 +80,7 @@ icon:<SiGooglegemini className="text-sky-400"/>
 
   {
     title: "Spotify Inspired Portfolio",
-    image: "/projects/portfolio.png",
+    image: "/images/portfolio.png",
     description:
       "A premium Spotify-inspired developer portfolio built using React, Tailwind CSS and Vite.",
     technologies: [
@@ -107,7 +107,7 @@ icon:<SiGooglegemini className="text-sky-400"/>
 
   {
     title: "AI-Based Sudden Cardiac Arrest Detection",
-    image: "/projects/sca.png",
+    image: "/images/detection.png",
     description:
       "Machine learning model for ECG-based Sudden Cardiac Arrest detection using spectral features.",
     technologies:[

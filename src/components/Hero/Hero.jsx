@@ -31,8 +31,10 @@ lg:grid-cols-2
 items-center
 
 min-h-screen
+lg:min-h-[700px]
 
-gap-16
+gap-12
+lg:gap-16
 "
 >
 
@@ -54,10 +56,26 @@ lg:pl-16
 
 text-center
 lg:text-left
+
+items-center
+lg:items-start
 "
 >
 
-          <div className="flex flex-col justify-center h-full">
+          <div
+  className="
+    flex
+    flex-col
+    justify-center
+
+    h-full
+
+    w-full
+    max-w-[340px]
+    sm:max-w-[500px]
+    lg:max-w-none
+  "
+>
 
   {/* Greeting */}
   <p className="text-[#1ED760] text-sm font-semibold tracking-widest uppercase">
@@ -111,7 +129,8 @@ leading-relaxed
   <p className="
 mt-8
 
-max-w-xl
+max-w-[330px]
+sm:max-w-xl
 
 mx-auto
 lg:mx-0
@@ -158,20 +177,30 @@ gap-5
     });
   }}
   className="
+    w-full
+    sm:w-auto
+
     flex
     items-center
+    justify-center
     gap-3
+
     h-14
     px-8
+
     rounded-full
+
     bg-[#1ED760]
+
     text-black
     font-semibold
     text-[15px]
+
     transition-all
     duration-300
+
     hover:shadow-[0_0_25px_rgba(30,215,96,0.35)]
-  "
+" 
 >
   View My Work
   <ArrowRight size={18} />
@@ -188,22 +217,32 @@ gap-5
     });
   }}
   className="
+    w-full
+    sm:w-auto
+
     flex
     items-center
+    justify-center
     gap-3
+
     h-14
     px-8
+
     rounded-full
+
     border
     border-zinc-700
+
     text-white
     font-medium
     text-[15px]
+
     transition-all
     duration-300
+
     hover:border-[#1ED760]
     hover:text-[#1ED760]
-  "
+"
 >
   Contact Me
   <MessageCircle size={18} />
@@ -246,14 +285,17 @@ lg:order-last
   className="
     absolute
 
-    w-[280px]
-    h-[280px]
+    w-[240px]
+h-[240px]
 
-    sm:w-[380px]
-    sm:h-[380px]
+sm:w-[340px]
+sm:h-[340px]
 
-    lg:w-[600px]
-    lg:h-[600px]
+md:w-[420px]
+md:h-[420px]
+
+lg:w-[600px]
+lg:h-[600px]
 
     rounded-full
 
@@ -269,14 +311,17 @@ lg:order-last
   className="
     absolute
 
-    w-[240px]
-    h-[240px]
+    w-[220px]
+h-[220px]
 
-    sm:w-[320px]
-    sm:h-[320px]
+sm:w-[300px]
+sm:h-[300px]
 
-    lg:w-[520px]
-    lg:h-[520px]
+md:w-[380px]
+md:h-[380px]
+
+lg:w-[520px]
+lg:h-[520px]
 
     rounded-full
 
@@ -288,20 +333,26 @@ lg:order-last
   <img
     src={profile}
     alt="Bisar Nawaz"
+    loading="eager"
+    decoding="async"
     className="
     relative
     z-10
 
-    w-[280px]
-    sm:w-[360px]
+    w-[230px]
+    xs:w-[250px]
+    sm:w-[320px]
+    md:w-[380px]
     lg:w-[470px]
+
+    max-w-full
 
     object-contain
 
     drop-shadow-[0_25px_40px_rgba(0,0,0,0.45)]
 
     select-none
-    "
+"
   />
 
   {/* Floating Spotify Card */}
